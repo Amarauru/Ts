@@ -57,3 +57,13 @@ let listaTeste = [5, true, ...listaFrutas];
 console.log(listaTeste);
 //sinceramente o conceito da tupla tá de boa de entender, o que me pega é que é basicamente um array, então pq não declarar só como array? terei de pesquisar
 //p identificar a tupla é só ver a variavel seguida de um dado primitvo + colchete
+function listarPessoas(nomes, idades) {
+    return [...nomes, ...idades];
+}
+let resultados = listarPessoas(['Pedro', 'Luiza'], [23, 24]);
+console.log(resultados);
+function CriarPessoa(...nome) {
+    return [...nome];
+}
+console.log(CriarPessoa('Pedro', 'Almeida'));
+console.log(CriarPessoa('Pedro', 'Henrique', 'Almeida'));
